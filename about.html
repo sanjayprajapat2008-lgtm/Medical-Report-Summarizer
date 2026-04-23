@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="aboutPageTitle">About Us - MedReport</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo">
+        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+        <span>MedReport</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html" data-i18n="navHome">Home</a></li>
+        <li><a href="analyzer.html" data-i18n="navAnalyzer">Analyzer</a></li>
+        <li><a href="about.html" class="active" data-i18n="navAbout">About</a></li>
+        <li><a href="contact.html" data-i18n="navContact">Contact</a></li>
+      </ul>
+      <div class="lang-switcher">
+        <select id="language-select" class="language-select" aria-label="Language">
+          <option value="en">EN</option>
+          <option value="hi">HI</option>
+        </select>
+      </div>
+    </div>
+  </nav>
+
+  <main class="page-container">
+    <section class="page-header">
+      <h1 data-i18n="aboutPageTitle">About MedReport</h1>
+      <p data-i18n="aboutPageSubtitle">Empowering patients through clear, understandable health information</p>
+    </section>
+
+    <section class="page-content">
+      <h2 data-i18n="missionTitle">Our Mission</h2>
+      <p data-i18n="missionText">MedReport is dedicated to bridging the gap between complex medical terminology and patient understanding. We believe everyone has the right to comprehend their own health information clearly and confidently.</p>
+
+      <h2 data-i18n="howTitle">How It Works</h2>
+      <div class="info-grid">
+        <div class="info-card">
+          <div class="info-number">1</div>
+          <h3 data-i18n="card1Title">Upload or Paste</h3>
+          <p data-i18n="card1Text">Simply upload your medical report as a file or paste the text directly into our analyzer.</p>
+        </div>
+        <div class="info-card">
+          <div class="info-number">2</div>
+          <h3 data-i18n="card2Title">AI Analysis</h3>
+          <p data-i18n="card2Text">Our advanced AI system analyzes your report and identifies key findings, conditions, and metrics.</p>
+        </div>
+        <div class="info-card">
+          <div class="info-number">3</div>
+          <h3 data-i18n="card3Title">Plain English</h3>
+          <p data-i18n="card3Text">We convert complex medical jargon into clear, easy-to-understand explanations.</p>
+        </div>
+        <div class="info-card">
+          <div class="info-number">4</div>
+          <h3 data-i18n="card4Title">Next Steps</h3>
+          <p data-i18n="card4Text">Receive personalized recommendations on what to do next with your health information.</p>
+        </div>
+      </div>
+
+      <h2 data-i18n="privacyTitle">Privacy & Security</h2>
+      <p data-i18n="privacyText">Your health information is extremely sensitive. We take the following measures to protect your data:</p>
+      <ul class="security-list">
+        <li>No data is stored on our servers</li>
+        <li>All processing is client-side</li>
+        <li>SSL/TLS encryption for all data transmission</li>
+        <li>We never share your information with third parties</li>
+        <li>Your session data is cleared when you close your browser</li>
+      </ul>
+
+      <h2 id="disclaimer" data-i18n="disclaimerTitle">Disclaimer</h2>
+      <p class="warning-box" data-i18n-html="disclaimerText">
+        <strong>⚠️ IMPORTANT:</strong> MedReport is an educational tool designed to help patients understand medical reports. It is NOT a substitute for professional medical advice, diagnosis, or treatment. 
+      </p>
+      <ul>
+        <li>Always consult with a qualified healthcare professional about your health concerns</li>
+        <li>Do not use this tool as the sole basis for medical decisions</li>
+        <li>Medical information should always be interpreted in the context of your personal health history</li>
+        <li>This tool may contain errors or omissions</li>
+        <li>We are not liable for any medical decisions made based on this tool's output</li>
+      </ul>
+
+      <h2 data-i18n="contactInfoTitle">Contact & Support</h2>
+      <p data-i18n-html="contactInfoText">Have questions or feedback? We'd love to hear from you. <a href="contact.html">Get in touch</a> with our team.</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>MedReport</h4>
+        <p>Making medical reports understandable for everyone.</p>
+      </div>
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="analyzer.html">Analyzer</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 MedReport. All rights reserved.</p>
+    </div>
+  </footer>
+  <script src="background.js"></script>
+  <script src="lang.js"></script>
+</body>
+</html>

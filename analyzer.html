@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="analyzerPageTitle">Medical Report Analyzer - MedReport</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo">
+        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+        <span>MedReport</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html" data-i18n="navHome">Home</a></li>
+        <li><a href="analyzer.html" class="active" data-i18n="navAnalyzer">Analyzer</a></li>
+        <li><a href="about.html" data-i18n="navAbout">About</a></li>
+        <li><a href="contact.html" data-i18n="navContact">Contact</a></li>
+      </ul>
+      <div class="lang-switcher">
+        <select id="language-select" class="language-select" aria-label="Language">
+          <option value="en">EN</option>
+          <option value="hi">HI</option>
+        </select>
+      </div>
+    </div>
+  </nav>
+
+  <main class="analyzer-container">
+    <div class="med-app">
+      <div class="med-header">
+        <div class="med-logo">
+          <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+        </div>
+        <div>
+          <p class="med-title" data-i18n="analyzerTitle">Medical Report Analyzer</p>
+          <p class="med-sub" data-i18n="analyzerSubtitle">Upload or paste your report — get a plain-English summary with key findings</p>
+        </div>
+      </div>
+
+      <div id="upload-zone" class="upload-zone" onclick="document.getElementById('file-input').click()" ondragover="ev(event,'drag')" ondragleave="ev(event,'')" ondrop="drop(event)">
+        <div class="upload-icon">📋</div>
+        <p class="upload-text" data-i18n="uploadText">Drop PDF or text file here</p>
+        <p class="upload-hint" data-i18n="uploadHint">or click to browse</p>
+      </div>
+      <input type="file" id="file-input" accept=".txt,.pdf" style="display:none" onchange="loadFile(event)">
+
+      <div class="or-divider" data-i18n="orDivider">or paste report text</div>
+
+      <div id="file-name-badge" style="display:none" class="file-badge">
+        <span>📄</span><span id="fname"></span>
+        <button onclick="clearFile()" style="background:none;border:none;cursor:pointer;color:var(--color-text-tertiary);font-size:14px;padding:0 0 0 4px;">✕</button>
+      </div>
+
+      <textarea id="report-text" data-i18n-placeholder="textAreaPlaceholder" placeholder="Paste medical report text here...&#10;&#10;Example: Patient is a 45-year-old male with elevated HbA1c of 8.2%. CBC shows WBC 11.2, Hemoglobin 13.1 g/dL. Blood pressure 148/92 mmHg. Creatinine 1.3 mg/dL..."></textarea>
+
+      <div class="btn-row">
+        <button class="btn-primary" id="analyze-btn" onclick="analyze()" data-i18n="analyzeButtonLabel">Analyze Report ↗</button>
+        <button class="sample-btn" onclick="loadSample()" data-i18n="loadSampleLabel">Load sample report</button>
+        <button class="btn-sec" onclick="clearAll()" data-i18n="clearLabel">Clear</button>
+      </div>
+      <div class="status-bar" id="status"></div>
+
+      <div class="results" id="results"></div>
+
+      <div class="disclaimer" id="disc" style="display:none">
+        <div class="disclaimer-header">⚠️ Important Disclaimer</div>
+        <p>This tool is for educational and informational purposes only and does not constitute medical advice. Always consult a qualified healthcare professional regarding your test results and health decisions. Never rely solely on this tool for medical diagnosis or treatment decisions.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4 data-i18n="supportTitle">Support</h4>
+        <p data-i18n-html="supportText">Questions? <a href="contact.html">Contact us</a></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 MedReport. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="analyzer.js"></script>
+  <script src="background.js"></script>
+  <script src="lang.js"></script>
+</body>
+</html>

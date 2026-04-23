@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="pageTitle">Medical Report Summarizer - AI-Powered Report Analysis</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo">
+        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+        <span>MedReport</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active" data-i18n="navHome">Home</a></li>
+        <li><a href="analyzer.html" data-i18n="navAnalyzer">Analyzer</a></li>
+        <li><a href="about.html" data-i18n="navAbout">About</a></li>
+        <li><a href="contact.html" data-i18n="navContact">Contact</a></li>
+      </ul>
+      <div class="lang-switcher">
+        <select id="language-select" class="language-select" aria-label="Language">
+          <option value="en">EN</option>
+          <option value="hi">HI</option>
+        </select>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-content">
+      <h1 data-i18n="heroTitle">Medical Report Summarizer</h1>
+      <p data-i18n="heroSubtitle">Get plain-English summaries of complex medical reports in seconds</p>
+      <a href="analyzer.html" class="btn btn-primary" data-i18n="heroCta">Get Started</a>
+    </div>
+    <div class="hero-image">
+      <svg viewBox="0 0 400 300" class="hero-svg">
+        <rect x="50" y="40" width="300" height="220" rx="10" fill="#e1f5ee" stroke="#1a6b5a" stroke-width="2"/>
+        <line x1="60" y1="60" x2="340" y2="60" stroke="#1a6b5a" stroke-width="1" opacity="0.3"/>
+        <line x1="60" y1="80" x2="340" y2="80" stroke="#1a6b5a" stroke-width="1" opacity="0.3"/>
+        <line x1="60" y1="100" x2="280" y2="100" stroke="#1a6b5a" stroke-width="1" opacity="0.3"/>
+        <line x1="60" y1="120" x2="320" y2="120" stroke="#1a6b5a" stroke-width="1" opacity="0.3"/>
+        <line x1="60" y1="140" x2="300" y2="140" stroke="#1a6b5a" stroke-width="1" opacity="0.3"/>
+        <circle cx="180" cy="180" r="25" fill="#1a6b5a"/>
+        <text x="180" y="190" text-anchor="middle" fill="white" font-size="24">✓</text>
+      </svg>
+    </div>
+  </header>
+
+  <section class="features">
+    <div class="feature-grid">
+      <div class="feature-card">
+        <div class="feature-icon">📋</div>
+        <h3 data-i18n="featureUploadTitle">Upload or Paste</h3>
+        <p data-i18n="featureUploadDesc">Easily upload PDF/text files or paste report content directly</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🤖</div>
+        <h3 data-i18n="featureAiTitle">AI Analysis</h3>
+        <p data-i18n="featureAiDesc">Advanced AI breaks down complex medical terminology</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">📊</div>
+        <h3 data-i18n="featureResultsTitle">Clear Results</h3>
+        <p data-i18n="featureResultsDesc">Get organized findings, conditions, and next steps</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">⚡</div>
+        <h3 data-i18n="featureSpeedTitle">Instant Summary</h3>
+        <p data-i18n="featureSpeedDesc">Get results in seconds, not minutes</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🔒</div>
+        <h3 data-i18n="featurePrivacyTitle">Private & Secure</h3>
+        <p data-i18n="featurePrivacyDesc">Your data is never stored or shared</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">💡</div>
+        <h3 data-i18n="featureEasyTitle">Easy to Understand</h3>
+        <p data-i18n="featureEasyDesc">Plain English explanations of all findings</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <h2 data-i18n="ctaTitle">Ready to understand your medical reports better?</h2>
+    <a href="analyzer.html" class="btn btn-primary btn-large" data-i18n="ctaButton">Start Analyzing Now</a>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4 data-i18n="footerTitle">MedReport</h4>
+        <p data-i18n="footerText">Making medical reports understandable for everyone.</p>
+      </div>
+      <div class="footer-section">
+        <h4 data-i18n="footerLinksTitle">Quick Links</h4>
+        <ul>
+          <li><a href="index.html" data-i18n="navHome">Home</a></li>
+          <li><a href="analyzer.html" data-i18n="navAnalyzer">Analyzer</a></li>
+          <li><a href="about.html" data-i18n="navAbout">About</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4 data-i18n="footerLegalTitle">Legal</h4>
+        <ul>
+          <li><a href="about.html#disclaimer" data-i18n="linkDisclaimer">Disclaimer</a></li>
+          <li><a href="#" data-i18n="linkPrivacy">Privacy Policy</a></li>
+          <li><a href="#" data-i18n="linkTerms">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 MedReport. All rights reserved.</p>
+    </div>
+  </footer>
+  <script src="background.js"></script>
+  <script src="lang.js"></script>
+</body>
+</html>
